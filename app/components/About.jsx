@@ -11,7 +11,7 @@ var React = require('react');
 var About = (props) =>{
     return(
         <div>
-            <h1 className="text-center">About</h1>
+            <h1 className="text-center page-title">About</h1>
             <p>
                 This application takes a city name and makes a request to the Open Weather API
                 which is then formatted and displayed to you. 
