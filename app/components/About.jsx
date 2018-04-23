@@ -20,7 +20,7 @@ var About = (props) =>{
                 I made this application alongside with an online course in order to learn React.js
                 and other miscs know hows.
             </p>
-            <h2>Links below:</h2>
+            <h3>Links below:</h3>
             <ul>
                 <li><a href="https://github.com/DarrylTang/React-Weather-App-Practice">Github</a></li>
                 <li><a href="https://www.udemy.com/the-complete-react-web-app-developer-course/learn/v4/content">Online Course</a></li>

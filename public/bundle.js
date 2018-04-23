@@ -26779,7 +26779,7 @@
 	            "I made this application alongside with an online course in order to learn React.js and other miscs know hows."
 	        ),
 	        React.createElement(
-	            "h2",
+	            "h3",
 	            null,
 	            "Links below:"
 	        ),
