@@ -24922,11 +24922,14 @@
 	        null,
 	        React.createElement(Nav, null),
 	        React.createElement(
-	            'h2',
-	            null,
-	            'Main component'
-	        ),
-	        props.children
+	            'div',
+	            { className: 'row' },
+	            React.createElement(
+	                'div',
+	                { className: 'columns medium-6 large-4 small-centered' },
+	                props.children
+	            )
+	        )
 	    );
 	};
 
@@ -26788,19 +26791,44 @@
 
 	var React = __webpack_require__(8);
 
+	var _require = __webpack_require__(166),
+	    Link = _require.Link;
+
 	var Examples = function Examples(props) {
 	    return React.createElement(
 	        'div',
 	        null,
 	        React.createElement(
-	            'h3',
-	            null,
+	            'h1',
+	            { className: 'text-center' },
 	            'Examples'
 	        ),
 	        React.createElement(
 	            'p',
 	            null,
-	            'Here are some examples on how you could use my app!'
+	            'Here are some example locations you could use to try my app!'
+	        ),
+	        React.createElement(
+	            'ol',
+	            null,
+	            React.createElement(
+	                'li',
+	                null,
+	                React.createElement(
+	                    Link,
+	                    { to: '/?location=Singapore' },
+	                    'Singapore'
+	                )
+	            ),
+	            React.createElement(
+	                'li',
+	                null,
+	                React.createElement(
+	                    Link,
+	                    { to: '/?location=Japan' },
+	                    'Tokyo, Japan'
+	                )
+	            )
 	        )
 	    );
 	};
