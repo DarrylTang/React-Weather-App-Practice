@@ -26639,9 +26639,23 @@
 
 	var About = function About(props) {
 	    return React.createElement(
-	        'h3',
+	        'div',
 	        null,
-	        'About component'
+	        React.createElement(
+	            'h3',
+	            null,
+	            'About'
+	        ),
+	        React.createElement(
+	            'p',
+	            null,
+	            'This application takes a city name and makes a request to the Open Weather API which is then formatted and displayed to you.'
+	        ),
+	        React.createElement(
+	            'p',
+	            null,
+	            'I made this application alongside with an online course in order to learn React.js and other miscs know hows.'
+	        )
 	    );
 	};
 
@@ -26657,9 +26671,18 @@
 
 	var Examples = function Examples(props) {
 	    return React.createElement(
-	        'h3',
+	        'div',
 	        null,
-	        'Examples component'
+	        React.createElement(
+	            'h3',
+	            null,
+	            'Examples'
+	        ),
+	        React.createElement(
+	            'p',
+	            null,
+	            'Here are some examples on how you could use my app!'
+	        )
 	    );
 	};
 
