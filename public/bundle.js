@@ -26747,7 +26747,7 @@
 /* 255 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	var React = __webpack_require__(8);
 
@@ -26761,22 +26761,49 @@
 
 	var About = function About(props) {
 	    return React.createElement(
-	        'div',
+	        "div",
 	        null,
 	        React.createElement(
-	            'h3',
-	            null,
-	            'About'
+	            "h1",
+	            { className: "text-center" },
+	            "About"
 	        ),
 	        React.createElement(
-	            'p',
+	            "p",
 	            null,
-	            'This application takes a city name and makes a request to the Open Weather API which is then formatted and displayed to you.'
+	            "This application takes a city name and makes a request to the Open Weather API which is then formatted and displayed to you."
 	        ),
 	        React.createElement(
-	            'p',
+	            "p",
 	            null,
-	            'I made this application alongside with an online course in order to learn React.js and other miscs know hows.'
+	            "I made this application alongside with an online course in order to learn React.js and other miscs know hows."
+	        ),
+	        React.createElement(
+	            "h2",
+	            null,
+	            "Links below:"
+	        ),
+	        React.createElement(
+	            "ul",
+	            null,
+	            React.createElement(
+	                "li",
+	                null,
+	                React.createElement(
+	                    "a",
+	                    { href: "https://github.com/DarrylTang/React-Weather-App-Practice" },
+	                    "Github"
+	                )
+	            ),
+	            React.createElement(
+	                "li",
+	                null,
+	                React.createElement(
+	                    "a",
+	                    { href: "https://www.udemy.com/the-complete-react-web-app-developer-course/learn/v4/content" },
+	                    "Online Course"
+	                )
+	            )
 	        )
 	    );
 	};
