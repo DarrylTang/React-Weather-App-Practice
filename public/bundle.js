@@ -24955,7 +24955,14 @@
 
 	    onSearch: function onSearch(e) {
 	        e.preventDefault();
-	        alert('Not yet wired up!');
+
+	        var searchLocation = this.refs.navSearch.value;
+	        var encodedLocation = encodeURIComponent(searchLocation);
+
+	        if (searchLocation.length > 0) {
+	            this.refs.navSearch.value = '';
+	            window.location.hash = '#/?location=' + encodedLocation;
+	        }
 	    },
 	    render: function render() {
 	        return React.createElement(
@@ -25013,7 +25020,7 @@
 	                        React.createElement(
 	                            'li',
 	                            null,
-	                            React.createElement('input', { type: 'search', placeholder: 'Search Weather by city' })
+	                            React.createElement('input', { type: 'search', placeholder: 'Search Weather by city', ref: 'navSearch' })
 	                        ),
 	                        React.createElement(
 	                            'li',
@@ -25064,7 +25071,9 @@
 
 	    this.setState({
 	      isLoading: true,
-	      errorMessage: undefined
+	      errorMessage: undefined,
+	      location: undefined,
+	      temp: undefined
 	    });
 
 	    OpenWeatherMap.getTemp(location).then(function (temp) {
@@ -25079,6 +25088,22 @@
 	        errorMessage: e.message
 	      });
 	    });
+	  },
+	  componentDidMount: function componentDidMount() {
+	    var queryLocation = this.props.location.query.location;
+
+	    if (queryLocation && queryLocation.length > 0) {
+	      this.handleSearch(queryLocation);
+	      window.location.hash = '#/';
+	    }
+	  },
+	  componentWillReceiveProps: function componentWillReceiveProps(newProps) {
+	    var queryLocation = newProps.location.query.location;
+
+	    if (queryLocation && queryLocation.length > 0) {
+	      this.handleSearch(queryLocation);
+	      window.location.hash = '#/';
+	    }
 	  },
 	  render: function render() {
 	    var _state = this.state,
